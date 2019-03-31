@@ -24,7 +24,6 @@ export default class App extends React.Component {
   };
 
   _handleBtnPress = () => {
-    console.log(this.state.pokemons.length);
     const randomNo = Math.floor(Math.random() * 150);
     this.setState({
       isPokemonChosen: true,
@@ -42,7 +41,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    const { isPokemonChosen, selectedPokemon, pokemons } = this.state;
+    const { isPokemonChosen, selectedPokemon } = this.state;
     return (
       <View style={styles.container}>
         <StatusBar barStyle="dark-content" />
