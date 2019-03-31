@@ -26,8 +26,8 @@ export default class Pokemon extends React.Component {
           <Image
             source={{ uri: selectedPokemon.sprites.front }}
             style={{
-              width: 300,
-              height: 300,
+              width: 200,
+              height: 200,
               marginTop: 50
             }}
           />
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   pokemon: {
     alignItems: "center",
     justifyContent: "space-between",
-    marginTop: 100
+    marginTop: 70
   },
   name: {
     color: "#3e3533",

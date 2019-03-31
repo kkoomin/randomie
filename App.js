@@ -8,19 +8,20 @@ import {
   Image
 } from "react-native";
 import Pokemon from "./Pokemon";
+import PokemonData from "./pokemonDB.json";
 
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
     isPokemonChosen: false,
-    pokemons: {},
+    pokemons: PokemonData["pokemon"],
     selectedPokemon: undefined
   };
 
   componentDidMount = () => {
-    return fetch("http://localhost:3000/pokemon")
-      .then(res => res.json())
-      .then(data => this.setState({ pokemons: data }));
+    // return fetch("http://localhost:3000/pokemon")
+    //   .then(res => res.json())
+    //   .then(data => this.setState({ pokemons: data }));
   };
 
   _handleBtnPress = () => {
@@ -87,8 +88,8 @@ const styles = StyleSheet.create({
   title: {
     color: "#3e3533",
     fontSize: 50,
-    marginTop: 100,
-    marginBottom: 20
+    marginTop: 80,
+    marginBottom: 10
   },
   description: {
     color: "#726b67",
