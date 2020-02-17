@@ -4,7 +4,7 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableOpacity,
+  TouchableOpacity, //A wrapper for making views respond properly to touches.
   Image
 } from "react-native";
 import Pokemon from "./Pokemon";
